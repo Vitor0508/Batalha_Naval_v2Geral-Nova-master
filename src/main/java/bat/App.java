@@ -65,17 +65,23 @@ public class App {
         //posiciona.posicionaBarco(Couracado.getNome(), 5 ,6);
         //posiciona.posicionaBarco(portaAviao, 5 ,5);
         //posiciona.posicionaBarco(PortaAviao.getNome(), 5 ,4);
-        posiciona.posicionaBarco(submarino1, 5 ,6);
-        System.out.println(submarino1.getX() +""+ submarino1.getY());
+        posiciona.posicionaBarcovertical(portaAviao, 5 ,5);
+        System.out.println(portaAviao.getX() +""+ portaAviao.getY());
         //posiciona.posicionaBarco(Submarino.getNome(), 1 ,2);
         //posiciona.posicionaBarcovertical(Submarino.getNome(), 7, 2);
         //posiciona.posicionaBarcovertical(couracado1, 3, 3);
         //posiciona.posicionaBarcovertical(PortaAviao.getNome(), 5,4);
         //posiciona.getTabuleiro().mostrarTabuleiro();
-        acertou.acertou(5, 7);
-        acertou.acertou(5, 6);
+        acertou.acertou(5, 5);
+        acertou.acertou(6, 5);
+        acertou.acertou(7, 5);
+        acertou.acertou(8, 5);
+        acertou.acertou(9, 5);
+        acertou.acertou(5, 5);
 
-         tabuleiro.mostrarTabuleiro();
+        
+
+        tabuleiro.mostrarTabuleiro();
 
     }
 

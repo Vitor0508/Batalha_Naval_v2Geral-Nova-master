@@ -98,6 +98,10 @@ public class Posiciona {
         }
         if (valido) {
             tabuleiro.setTabuleiroHorizontal(x, y, 4);
+            barco.setX(x);
+            barco.setY(y);
+            barco.setVertical(false);
+            barco.setPosicaoPartes();
         }
     } else if (barco instanceof PortaAviao)  {
         for (int i = 0; i < 5; i++) {
@@ -109,6 +113,10 @@ public class Posiciona {
         }
         if (valido) {
             tabuleiro.setTabuleiroHorizontal(x, y, 5);
+            barco.setX(x);
+            barco.setY(y);
+            barco.setVertical(false);
+            barco.setPosicaoPartes();
         }
     }
 }
@@ -125,6 +133,10 @@ public class Posiciona {
         }
         if (valido) {
             tabuleiro.setTabuleiroVertical(x, y, 2);
+            barco.setX(x);
+            barco.setY(y);
+            barco.setVertical(true);
+            barco.setPosicaoPartes();
         }
     } else if (barco instanceof Couracado) {
         for (int i = 0; i < 4; i++) {
@@ -136,6 +148,10 @@ public class Posiciona {
         }
         if (valido) {
             tabuleiro.setTabuleiroVertical(x, y, 4);
+            barco.setX(x);
+            barco.setY(y);
+            barco.setVertical(true);
+            barco.setPosicaoPartes();
         }
     } else if (barco instanceof PortaAviao) {
         for (int i = 0; i < 5; i++) {
@@ -147,6 +163,10 @@ public class Posiciona {
         }
         if (valido) {
             tabuleiro.setTabuleiroVertical(x, y, 5);
+            barco.setX(x);
+            barco.setY(y);
+            barco.setVertical(true);
+            barco.setPosicaoPartes();
         }
     }
 }
