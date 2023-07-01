@@ -19,8 +19,6 @@ public class Acertou {
         this.tabuleiro = tabuleiro;
     }
 
-    
-
     public int getX() {
         return x;
     }
@@ -48,36 +46,60 @@ public class Acertou {
     public boolean acertou(int x, int y) {
         if (tabuleiro.getTabuleiro()[x][y] != 0) {
             System.out.println("Acertou");
-            
+
             switch (tabuleiro.getTabuleiro()[x][y]) {
                 case 2:
                     for (Barco barco : barcos) {
-                        for(int i = 0; i < barco.getTamanho(); i++){
-                            if(barco.getPosicaoPartes()[i][0] == x && barco.getPosicaoPartes()[i][1] == y){
-                                barco.setPartes(barco.getPartes()-1);
+                        for (int i = 0; i < barco.getTamanho(); i++) {
+                            if (barco.getPosicaoPartes()[i][0] == x && barco.getPosicaoPartes()[i][1] == y) {
+                                barco.setPartes(barco.getPartes() - 1);
                                 System.out.println("Partes: " + barco.getPartes());
                             }
                         }
-                        if(barco.getPartes()==0){
+                        if (barco.getPartes() == 0) {
                             barco.setAfundado(true);
                             System.out.println("Afundou");
                         }
                     }
                     break;
                 case 4:
-                    System.out.println("Couracado");
+                    //System.out.println("teste");
+                    for (Barco barco : barcos) {
+                        for (int i = 0; i < barco.getTamanho(); i++) {
+                            if (barco.getPosicaoPartes()[i][0] == x && barco.getPosicaoPartes()[i][1] == y) {
+                                barco.setPartes(barco.getPartes() - 1);
+                                System.out.println("Partes: " + barco.getPartes());
+                            }
+                        }
+                        if (barco.getPartes() == 0) {
+                            barco.setAfundado(true);
+                            System.out.println("Afundou");
+                        }
+                    }
                     break;
                 case 5:
                     System.out.println("Porta Aviao");
+                    for (Barco barco : barcos) {
+                        for (int i = 0; i < barco.getTamanho(); i++) {
+                            if (barco.getPosicaoPartes()[i][0] == x && barco.getPosicaoPartes()[i][1] == y) {
+                                barco.setPartes(barco.getPartes() - 1);
+                                System.out.println("Partes: " + barco.getPartes());
+                            }
+                        }
+                        if (barco.getPartes() == 0) {
+                            barco.setAfundado(true);
+                            System.out.println("Afundou");
+                        }
+                    }
                     break;
                 default:
                     System.out.println("Erro");
                     break;
             }
-            tabuleiro.getTabuleiro()[x][y] = 0;
-            
+            tabuleiro.getTabuleiro()[x][y] = -1;
             return true;
         } else {
+            tabuleiro.getTabuleiro()[x][y] = -1;
             System.out.println("Errou");
             return false;
 
