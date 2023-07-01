@@ -63,7 +63,17 @@ public class Couracado  extends Barco{
     }
 
     public void setPosicaoPartes() {
-        this.posicaoPartes = posicaoPartes;
+        if (!this.vertical) {
+            for (int i = 0; i < this.tamanho; i++) {
+                this.posicaoPartes[i][0] = this.x;
+                this.posicaoPartes[i][1] = this.y + i;
+            }
+        } else {
+            for (int i = 0; i < this.tamanho; i++) {
+                this.posicaoPartes[i][0] = this.x + i;
+                this.posicaoPartes[i][1] = this.y;
+            }
+        }
     }
 
     
