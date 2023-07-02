@@ -2,17 +2,43 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bat.Controller.PrimaryController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="343.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="bat.Controller.PrimaryController">
    <children>
-      <Label fx:id="tituloLabel" layoutX="150.0" layoutY="45.0" text="Batalha Naval">
+      <ImageView fx:id="principalImage" fitHeight="386.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/batalha_naval_tela_inicio-transformed.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="tituloLabel" layoutX="156.0" layoutY="14.0" text="Batalha Naval">
          <font>
             <Font name="Ubuntu" size="48.0" />
          </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="0.24644549763033174" startY="0.27014218009478674">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.05999999865889549" green="0.03420000150799751" blue="0.03420000150799751" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
       </Label>
-      <Button fx:id="JogarButton" layoutX="233.0" layoutY="165.0" mnemonicParsing="false" onAction="#jogarClicado" prefHeight="71.0" prefWidth="135.0" style="-fx-background-color: red;" text="Jogar">
+      <Button fx:id="JogarButton" layoutX="221.0" layoutY="255.0" mnemonicParsing="false" onAction="#jogarClicado" prefHeight="43.0" prefWidth="158.0" style="-fx-background-color: red;" text="Jogar">
          <font>
             <Font size="30.0" />
          </font>

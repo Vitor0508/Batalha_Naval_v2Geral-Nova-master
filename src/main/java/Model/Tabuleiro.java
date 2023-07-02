@@ -95,8 +95,6 @@ public class Tabuleiro {
     }
 
     public void setTabuleiroHorizontal(int i, int y, int j) {
-        System.out.println("i: " + i + " y: " + y);
-        System.out.println("j: " + j);
         for (int k = 0; k < j; k++) {
             this.tabuleiro[i][y + k] = j;
 
@@ -104,7 +102,6 @@ public class Tabuleiro {
     }
 
     public void setTabuleiroVertical(int i, int y, int j) {
-        System.out.println("i: " + i + " y: " + y);
         for (int k = 0; k < j; k++) {
             this.tabuleiro[i + k][y] = j;
 

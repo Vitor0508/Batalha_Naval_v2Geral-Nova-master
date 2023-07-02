@@ -35,18 +35,6 @@ public class App {
 
         Submarino submarino3 = new Submarino();
 
-
-        /*ArrayList<Submarino> submarinos = new ArrayList<Submarino>();
-        ArrayList<Couracado> couracados = new ArrayList<Couracado>();
-
-
-        submarinos.add(submarino1);
-        submarinos.add(submarino2);
-        submarinos.add(submarino3);
-
-        couracados.add(couracado1);
-        couracados.add(couracado2);
-        */
         ArrayList<Barco> barcos = new ArrayList<Barco>();
 
         barcos.add(submarino1);
@@ -59,25 +47,13 @@ public class App {
         posiciona.setTabuleiro(tabuleiro);
         acertou.setTabuleiro(tabuleiro);
         acertou.setBarcos(barcos);
-        
-        //posiciona.setPortaAviao(portaAviao);
-        posiciona.getSubmarino();
-        //posiciona.posicionaBarco(Couracado.getNome(), 5 ,6);
-        //posiciona.posicionaBarco(portaAviao, 5 ,5);
-        //posiciona.posicionaBarco(PortaAviao.getNome(), 5 ,4);
-        posiciona.posicionaBarcovertical(portaAviao, 5 ,5);
-        //System.out.println(portaAviao.getX() +""+ portaAviao.getY());
-        //posiciona.posicionaBarco(Submarino.getNome(), 1 ,2);
-        //posiciona.posicionaBarcovertical(Submarino.getNome(), 7, 2);
-        //posiciona.posicionaBarcovertical(couracado1, 3, 3);
-        //posiciona.posicionaBarcovertical(PortaAviao.getNome(), 5,4);
-        //posiciona.getTabuleiro().mostrarTabuleiro();
+
+    
+        posiciona.posicionaBarcovertical(submarino1, 5, 5);
 
         acertou.acertou(5, 5);
-        acertou.acertou(6, 5);
-        acertou.acertou(7, 5);
-        acertou.acertou(8, 5);
-        acertou.acertou(9, 5);
+        acertou.acertou(5, 5);
+
 
         tabuleiro.mostrarTabuleiro();
 
@@ -88,29 +64,29 @@ public class App {
 /**
  * JavaFX App
  */
-// public class App extends Application {
+// //public class App extends Application {
 
-// private static Scene scene;
+// // private static Scene scene;
 
-// @Override
-// public void start(Stage stage) throws IOException {
-// scene = new Scene(loadFXML("primary"), 640, 480);
-// stage.setScene(scene);
-// stage.show();
-// }
+// // @Override
+// // public void start(Stage stage) throws IOException {
+// // scene = new Scene(loadFXML("primary"), 640, 480);
+// // stage.setScene(scene);
+// // stage.show();
+// // }
 
-// public static void setRoot(String fxml) throws IOException {
-// scene.setRoot(loadFXML(fxml));
-// }
+// // public static void setRoot(String fxml) throws IOException {
+// // scene.setRoot(loadFXML(fxml));
+// // }
 
-// private static Parent loadFXML(String fxml) throws IOException {
-// FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml +
-// ".fxml"));
-// return fxmlLoader.load();
-// }
+// // private static Parent loadFXML(String fxml) throws IOException {
+// // FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml +
+// // ".fxml"));
+// // return fxmlLoader.load();
+// // }
 
-// public static void main(String[] args) {
-// launch();
-// }
+// // public static void main(String[] args) {
+// // launch();
+// // }
 
-// }
+// // }
